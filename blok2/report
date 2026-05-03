@@ -1,0 +1,46 @@
+-------------------2A-------------
+
+1. Newton-Raphsonova konvergira najbrže
+
+    Ta metoda konvergira najbrže zato što posjeduje informacije o derivaciji funkcije, tj. f'(x),
+pa ima kvadratičnu konvergenciju prema toj nultočki. (br. točnih znamenki se otprilike udvostručuje
+u svakom koraku) Na grafu je prikazana kao najstrmije padajuća plava linija.
+
+2. Metoda bisekcije je najbrža
+
+    Ta metoda sigurno prolazi jednu ili više nultočaka kada su rubovi intervala suprotnog predznaka.
+Ona ne ovisi o derivaciji i smanjuje prostor traženja u pola na svakom koraku.
+
+3. Zašto open metode mogu zakazati, a bracketing metode ne?
+
+Bracketing metoda je unutar određenog intervala i ne može izaći van.
+Open metode mogu zakazati zato što su slobodne i ako dođu do dijela funkcije gdje je derivacija =0
+one se pogube ili počnu preskakati dijelove funkcije. Ali zato su brze.
+
+-------------------2B-------------
+
+1. Komentirati osjetljivost metode na početnu pretpostavku
+
+    Metoda nije puno osjetljiva na početnu pretpostavku zato što stalno raste, Newtonova metoda
+navodi brzo do rješenja bilo to 0/1, i uvijek dovodi do mojih 2.37A jer je samo razlika broj koraka.
+
+-------------------2C-------------
+
+1. U čemu je razlika između ove dvije metode?
+
+    Razlika je u tome što zlatni rez radi tako da sužava interval dok ne nađe dno bez obzira na oblik funkcije,
+a parabolicka interpolacija ima 3 točke i kroz knjih crta parabolu u kojoj je minimum pretpostavljeno dno funkcije.
+
+2. Kada jedna ima prednost pred drugom?
+
+    Zlatni rez bolji kada je funkcija oštra, a parabola je bolja kada je funkcija bolja ili glađa jer joj
+treba samo nekoliko skokova dok zlatnom rezu treba više ajmo reći nepotrebnih koraka.
+
+-------------------2D-------------
+
+1. Interpretirati: zašto upravo ta geometrija daje minimum?
+
+    To je najoptimiziraniji oblik valjka zato što bi u drugim dimenzijama trebao više površine da bi zadržao
+jednaki volumen. Uglavnom, u pravom svijetu, mi želimo potrošiti što manje moguće materijala za izradu nećega
+što želimo da drži određenu količinu stvari, i to idealno rješenje je upravo kada je visina jednaka promjeru.
+Rezultat = ekonomičan dizajn.
