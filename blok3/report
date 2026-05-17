@@ -1,0 +1,28 @@
+------------------------3B----------------
+
+Zašto dolazi do numeričkog problema?
+
+Zato što se naša naivna metoda iz prve odmah dijeli s jako malim brojem 0.0001 pa od takvog dijeljenja nastaje jako
+veliki broj/multiplikator koji u slijedećem koraku pojede druge male brojeve u jednadzbi zbog limitiranog broja
+decimala koje se prirodno spremaju u računalo u ovom slučaju. To bi značilo da gubi preciznost zbog rounding error-a.
+U pivotingu zamijenjujemo redove tako da dijelimo s najvećim brojem, kao rezultat toga brojevi ostaju mali pa tako
+i precizniji te je rezultat točniji.
+
+-----------------------3C--------------------
+
+Što condition number govori o osjetljivosti?
+
+Condition number nam o osjetljivosti govori to da je sustav otpora mreže u dobrom stanju jer je izuzetno nizak i ubiti
+se približava jedinici. Jednostavno , matrica je vrlo stabilna i na nju ne utječu male rounding errors.
+Aritmetika se neće početi čudno ponašati čak iako imamo male pogreške u mjerenju vrijednosti otpornika ili jako male
+varijacije napona na ulaznoj strani. Neće biti nikakvih nepravilnih, nepredviđenih skokova u izračunatim strujama
+(i1, i2, i3).
+
+----------------------3D------------------------
+
+Usporedba brzine konvergencije i dijagonalna dominacija
+
+Po meni glavna razlika je u direktnim metodama kao što su LU i gauss, one sustav rješavaju odmah točno i besprekidno
+kroz neki broj operacija koji se ne mijenja. Na primjer gauss je iterativna metoda koja malo po malo kroz ponavljanja
+dolazi put rješenja. Za ovako mali sustav kao naš direktne metode su puno brže jer seidelu treba desetak ili više
+krugova da postigne traženu preciznost.
