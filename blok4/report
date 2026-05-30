@@ -1,0 +1,35 @@
+-----------------------4a---------------------
+
+Koliko dobro model opisuje podatke? Ima li smisla linearni model
+
+R2 vrijednost od 0,9984 ukazuje na to da varijacije temperature čine 99,84 posto varijacije napona.
+U ovom slučaju, lin. model ima savršenog fizičkog smisla. Graf ostataka prikazuje točke iznad i ispod nulte linije
+koje su potpuno nasumično raspršene i nemaju nikakve strukturne uzorke, poput lijevka ili U-oblika. V pogreška se
+dosljedno i stabilno skalira s temperaturom, što se vidi po najvećoj pogrešci koja ostaje ispod 0.07 V
+
+-----------------------4B---------------------
+
+Protumačiti koji model je najprikladniji i zašto
+
+Cube model. Kubni polinom postiže maksimalnu statističku točnost s apsolutno najvišim R2(0,992) i najnižom ukupnom
+pogreškom (RMSE =2,45), dok kvadratni i naši modificirani ponderirani eksponencijalni modeli bliže prate krivulju.
+Normalni linearni model u potpunosti promašuje rastuću krivulju podataka (RMSE =31,3).
+
+-----------------------4C--------------------------.
+
+Kada se koristi interpolacija,a kada regresija?
+
+Iako krivulja mora precizno prolaziti kroz svaki pojedini informacijski čvor, aproksimacija se koristi za potpuno
+čiste informacije s 0 eksperimentalnog šuma.Regresija mapira glatki, opći trend blizu točaka kako bi se uklonile
+anomalije iz stvarnih laboratorijskih podataka koji sadrže šum i varijacije kalibracije.
+
+Zašto interpolacija nije dobra kad podaci sadrže šum?
+
+Krivulja se mora dramatično uvijati i savijati kako bi dosegla svaku pojedinu neispravnu točku jer interpolacija
+interpretira skokove pogrešaka kao abs istinu.
+
+Što se događa kad koristite polinom previsokog stupnja? (Rungeov fenomen)
+
+Linija se divlje približava lijevoj i desnoj granici domene kad god se funkcija višeg reda koristi za interpolaciju
+jednoliko razmaknutih točaka. Model je potpuno beskoristan za predviđanje međurezultata zbog pretjeranog ponašanja
+osciliranja između tih čvorova.
