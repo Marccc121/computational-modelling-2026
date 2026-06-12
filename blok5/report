@@ -1,0 +1,29 @@
+-------------------5A---------------------
+
+Koji je red tocnosti?
+
+Trapeza je 2. red. (O(h2)), poloviti korak snanjuje grešku 4 puta (2x2)
+Simpson: 4. red. (O(h4)), poloviti korak snanjuje grešku 16 puta (4x4)
+
+---------------------5C---------------------
+
+Zašto je RK4 točniji od Eulera pri istom h?
+
+Zato što rk4 računa 4 probna nagiba unutar jednog koraka i uzima njihovu srednju vrijednost,
+pa savršeno prati .
+
+Kako se vidi red točnosti iz log-log grafa?
+
+Može se vidjeti po strmini pada. Rk4 ima puno strmiji pad od Eulera, a red točnosti je nagib ili strmina pada na grafu.
+
+---------------------5E---------------------
+
+Zašto adaptivne metode imaju smisla?
+
+Imaju više smisla jer same mijenjaju korak u hodu. Kao npr, kada je oscilacija nagla uzimaju manji korak nego
+kada je stabilnija ili ravnija.
+
+Kada fiksni korak može biti loš izbor?
+
+Koda je sustav s naglim promjenama, kao tranzijenata RLC kruga. Ako je fiksni korak prevelik, simulacija postane
+netočna ili eksplodira; ako je premalen, računalo uzaludno troši sate računajući ravne dijelove grafa.
